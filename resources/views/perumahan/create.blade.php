@@ -39,14 +39,14 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="">ID Tipe</label>
-                            <select name="id_tipe" class="form-control @error('id_tipe') is-invalid @enderror">
+                            <label for="">Tipe Rumah</label>
+                            <select name="tipe_rumah" class="form-control @error('tipe_rumah') is-invalid @enderror">
                                 @php $no = 1; @endphp
                                 @foreach ($tipe as $data)
-                                <option value="{{ $data->id }}">{{ $data->tipe_rumah }}</option>
+                                <option value="{{ $data->tipe }}">{{ $data->tipe_rumah }}</option>
                                 @endforeach
                             </select>
-                            @error('id_tipe')
+                            @error('tpe_rumah')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -61,6 +61,7 @@
                             </span>
                             @enderror
                         </div>
+
                         <div class="mb-3">
                             <div class="d-grid gap-2">
                                 <button class="btn btn-primary" type="submit">Save</button>

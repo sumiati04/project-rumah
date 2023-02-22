@@ -222,6 +222,16 @@
                             <span class="elementor-icon-list-text">Situtarate Residence</span>
                         </li>
                     </ul>
+                    <br>
+                    <h4>Contact Us</h4>
+                    <ul class="elementor-icon-list-items">
+                        <li class="elementor-icon-list-item">
+                            <span class="elementor-icon-list-icon">
+                                <i class="bi bi-whatsapp"></i>
+                            </span>
+                            <span class="elementor-icon-list-text">0882-2472-6517</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <!-- Container End -->
