@@ -21,6 +21,16 @@
                                     </span>
                                 @enderror
                             </div>
+                            <div class="mb-3">
+                                <label for="">Slug</label>
+                                <input type="text" name="slug"
+                                    class="form-control @error('slug') is-invalid @enderror">
+                                @error('slug')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
 
                             <div class="mb-3">
                                 <div class="d-grid gap-2">

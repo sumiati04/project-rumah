@@ -47,6 +47,14 @@ class PerumahanController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'luas_rumah' => 'required',
+            'fasilitas_rumah' => 'required',
+            'harga' => 'required',
+            'id_tipe' => 'required',
+            'foto_rumah' => 'image|max:2048',
+        ]);
+        
         $perumahan = new Perumahan();
         $perumahan->luas_rumah = $request->luas_rumah;
         $perumahan->fasilitas_rumah = $request->fasilitas_rumah;

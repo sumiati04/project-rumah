@@ -18,6 +18,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Tipe Rumah</th>
+                                    <th>Tipe Rumah</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -27,6 +28,7 @@
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>{{ $data->tipe_rumah }}</td>
+                                    <td>{{ $data->slug }}</td>
                                     <td>
                                         <form action="{{ route('tipe.destroy', $data->id) }}" method="post">
                                             @method('delete')

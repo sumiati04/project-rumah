@@ -46,10 +46,12 @@ class TipeController extends Controller
         //
         $validated = $request->validate([
             'tipe_rumah' => 'required',
+            'slug' => 'required',
         ]);
 
         $tipe = new Tipe();
         $tipe->tipe_rumah = $request->tipe_rumah;
+        $tipe->slug = $request->slug;
         $tipe->save();
         return redirect()->route('tipe.index')->with('succes', 
             'Data berhasil dibuat!');
@@ -93,10 +95,12 @@ class TipeController extends Controller
         //
         $validated = $request->validate([
             'tipe_rumah' => 'required',
+            'slug' => 'required',
         ]);
 
         $tipe = Tipe::findOrFail($id);
         $tipe->tipe_rumah = $request->tipe_rumah;
+        $tipe->slug = $request->slug;
         $tipe->save();
         return redirect()->route('tipe.index')->with('succes', 
             'Data berhasil diedit!');
